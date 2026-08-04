@@ -1,4 +1,0 @@
-Before Each method
-Laptops displayed on screen: 0
-After Each method
-After All method

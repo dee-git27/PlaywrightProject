@@ -1,4 +1,0 @@
-Before All method
-Before Each method
-Phones displayed on screen: 0
-After Each method
