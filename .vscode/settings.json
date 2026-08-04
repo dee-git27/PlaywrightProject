@@ -1,0 +1,7 @@
+{
+    "cucumberautocomplete.steps": [
+        "tests/BDD/stepDefinition/*.ts",
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true
+
+}

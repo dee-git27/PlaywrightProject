@@ -1,0 +1,13 @@
+All links on page: Home,HomeKgGLo,Created,No Content,Moved,Bad Request,Unauthorized,Forbidden,Not Found
+First link: Home
+Last link: Not Found
+Third link: Created
+links via foreach loop :Home
+links via foreach loop :HomeKgGLo
+links via foreach loop :Created
+links via foreach loop :No Content
+links via foreach loop :Moved
+links via foreach loop :Bad Request
+links via foreach loop :Unauthorized
+links via foreach loop :Forbidden
+links via foreach loop :Not Found
