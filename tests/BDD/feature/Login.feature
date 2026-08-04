@@ -10,5 +10,5 @@ Scenario Outline:
     Then User logs out
     Examples:
     | Product |
-    | Phone   |
-    | Laptop  |
+    | Phones   |
+    | Laptops  |
