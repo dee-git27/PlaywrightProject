@@ -1,10 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { defineBddConfig } from 'playwright-bdd';
 
-const testDir = defineBddConfig({
-  features: 'tests/BDD/feature/Login.feature',
-  steps: 'tests/BDD/stepDefinition/Login.steps.ts',
-})
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -18,23 +13,20 @@ const testDir = defineBddConfig({
  */
 export default defineConfig({
   timeout: 10000,
-  //testDir: './tests',
-  testDir,
+  testDir: './tests',
   retries: 1,
   /* Run tests in files in parallel */
+  fullyParallel: false,
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   //retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
+  workers: process.env.CI ? 1 : undefined,
   workers: process.env.CI ? 2 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-              ['html'],
-              ['allure-playwright']
-            ],
-  //reporter:'allure-playwright',
+  reporter: 'allure-playwright',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
